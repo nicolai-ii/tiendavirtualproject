@@ -1,6 +1,12 @@
 /* Estilos para la columna izquierda */
+
 .bg-left {
-    background-color: #f7f7e7; /* Color de fondo vacío */
+    background-color: #fff;
+    height: 100vh;
+}
+
+.bg-right{
+    background-color: #F5F6F8;
 }
 
 /* Estilos para el contenedor del formulario */
