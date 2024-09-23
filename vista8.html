@@ -1,3 +1,4 @@
+<!-- Home de Administracion -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,60 +11,60 @@
 </head>
 
 <body></body>
-    <!-- Contenedor principal -->
-    <div class="container-fluid vh-100">
-        <div class="row h-100">
-            <!-- Columna izquierda con menú -->
-            <div class="col-md-2 bg-left p-4">
-                <h4>Dashboard</h4>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Proveedores</a></li>
-                    <li><a href="#">Clientes</a></li>
-                    <li><a href="#">Reportes</a></li>
-                    <li><a href="vista9.html#">Administración de usuarios</a></li>
-                </ul>
+<!-- Contenedor principal -->
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+        <!-- Columna izquierda con menú -->
+        <div class="col-md-2 bg-left p-4">
+            <h4>Dashboard</h4>
+            <ul class="list-unstyled">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Proveedores</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Reportes</a></li>
+                <li><a href="vista9.html#">Administración de usuarios</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna central con tarjetas -->
+        <div class="col-md-10 p-5 bg-right">
+            <h2>Resumen de Actividad</h2>
+
+            <!-- Tarjeta Productos -->
+            <div class="card mb-3" id="productos" onclick="navigateTo('productos')">
+                <div class="card-body">
+                    <h5 class="card-title">Productos</h5>
+                    <p class="card-text">
+                        Último cambio: <strong>28 de diciembre, 2023</strong><br>
+                        Products name, Products name, Products name...
+                    </p>
+                </div>
             </div>
 
-            <!-- Columna central con tarjetas -->
-            <div class="col-md-10 p-5 bg-right">
-                <h2>Resumen de Actividad</h2>
-
-                <!-- Tarjeta Productos -->
-                <div class="card mb-3" id="productos" onclick="navigateTo('productos')">
-                    <div class="card-body">
-                        <h5 class="card-title">Productos</h5>
-                        <p class="card-text">
-                            Último cambio: <strong>28 de diciembre, 2023</strong><br>
-                            Products name, Products name, Products name...
-                        </p>
-                    </div>
+            <!-- Tarjeta Proveedores -->
+            <div class="card mb-3" id="proveedores" onclick="navigateTo('proveedores')">
+                <div class="card-body">
+                    <h5 class="card-title">Proveedores</h5>
+                    <p class="card-text">
+                        Último cambio: <strong>28 de diciembre, 2023</strong><br>
+                        Provider name, 98767909, name@home.com...
+                    </p>
                 </div>
+            </div>
 
-                <!-- Tarjeta Proveedores -->
-                <div class="card mb-3" id="proveedores" onclick="navigateTo('proveedores')">
-                    <div class="card-body">
-                        <h5 class="card-title">Proveedores</h5>
-                        <p class="card-text">
-                            Último cambio: <strong>28 de diciembre, 2023</strong><br>
-                            Provider name, 98767909, name@home.com...
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Tarjeta Informes -->
-                <div class="card mb-3" id="informes" onclick="navigateTo('informes')">
-                    <div class="card-body">
-                        <h5 class="card-title">Informes</h5>
-                        <p class="card-text">
-                            Último cambio: <strong>28 de diciembre, 2023</strong><br>
-                            Report name, fecha de informe...
-                        </p>
-                    </div>
+            <!-- Tarjeta Informes -->
+            <div class="card mb-3" id="informes" onclick="navigateTo('informes')">
+                <div class="card-body">
+                    <h5 class="card-title">Informes</h5>
+                    <p class="card-text">
+                        Último cambio: <strong>28 de diciembre, 2023</strong><br>
+                        Report name, fecha de informe...
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 </html>

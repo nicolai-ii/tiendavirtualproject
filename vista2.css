@@ -28,7 +28,8 @@
     margin-bottom: 10px;
 }
 
-.filtros input[type="checkbox"], .filtros input[type="radio"] {
+.filtros input[type="checkbox"],
+.filtros input[type="radio"] {
     margin-right: 10px;
 }
 
@@ -72,7 +73,7 @@
 }
 
 .rating .star:hover,
-.rating .star:hover ~ .star {
+.rating .star:hover~.star {
     color: gold;
 }
 
@@ -89,12 +90,14 @@
     font-family: Arial, sans-serif;
 }
 
-.footer h4, .footer h5 {
+.footer h4,
+.footer h5 {
     font-weight: bold;
     color: #fff;
 }
 
-.footer p, .footer li {
+.footer p,
+.footer li {
     color: #ccc;
 }
 
@@ -146,10 +149,12 @@
     .footer {
         text-align: center;
     }
+
     .social-icons {
         justify-content: center;
         margin-top: 20px;
     }
+
     .col-md-6 {
         text-align: center;
     }
@@ -226,22 +231,31 @@
     display: none;
     position: absolute;
     right: 0;
-    top: 140px; /* Aumentar el margen superior para que la tarjeta no esté tan pegada */
-    width: 40%; /* Ajusta el ancho si es necesario */
-    margin-right: 20px; /* Añadir margen derecho para separar de los bordes */
+    top: 140px;
+    /* Aumentar el margen superior para que la tarjeta no esté tan pegada */
+    width: 40%;
+    /* Ajusta el ancho si es necesario */
+    margin-right: 20px;
+    /* Añadir margen derecho para separar de los bordes */
     background-color: white;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-    padding: 15px; /* Añadir relleno interno */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    z-index: 10;
+    /* Asegura que esté por encima de otros elementos */
+    padding: 15px;
+    /* Añadir relleno interno */
     transition: all 0.3s ease;
 }
 
 /* Botón de cierre (X) en la parte superior derecha */
 #expandedCard-carousel1 .close-expanded {
     position: absolute;
-    top: 10px; /* Posicionar en la parte superior */
-    right: 10px; /* Posicionar en la parte derecha */
+    top: 10px;
+    /* Posicionar en la parte superior */
+    right: 10px;
+    /* Posicionar en la parte derecha */
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
@@ -260,87 +274,87 @@
     color: #fff;
     padding: 40px 0;
     font-family: Arial, sans-serif;
-  }
-  
-  .footer h4,
-  .footer h5 {
+}
+
+.footer h4,
+.footer h5 {
     font-weight: bold;
     color: #fff;
-  }
-  
-  .footer p,
-  .footer li {
+}
+
+.footer p,
+.footer li {
     color: #ccc;
-  }
-  
-  .footer ul {
+}
+
+.footer ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer ul li {
+}
+
+.footer ul li {
     margin-bottom: 10px;
-  }
-  
-  .footer ul li a {
+}
+
+.footer ul li a {
     color: #ccc;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
-  
-  .footer ul li a:hover {
+}
+
+.footer ul li a:hover {
     color: #fff;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     color: #fff;
     margin-right: 15px;
     font-size: 24px;
     transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: #FFDE59;
-  }
-  
-  /* Ajuste de los iconos sociales */
-  .social-icons {
+}
+
+/* Ajuste de los iconos sociales */
+.social-icons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  
-  .footer .container {
+}
+
+.footer .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .footer p {
+}
+
+.footer p {
     margin: 0;
-  }
-  
-  .footer .row {
+}
+
+.footer .row {
     margin-bottom: 20px;
-  }
-  
-  .footer .row.mt-4 {
+}
+
+.footer .row.mt-4 {
     margin-top: 20px;
     border-top: 1px solid #555;
     padding-top: 20px;
-  }
-  
-  .footer .col-md-6 {
+}
+
+.footer .col-md-6 {
     display: flex;
     align-items: center;
-  }
-  
-  /* Estilo del contenedor negro con bordes redondeados */
-  .footer .row.mt-4 {
+}
+
+/* Estilo del contenedor negro con bordes redondeados */
+.footer .row.mt-4 {
     background-color: #111;
     padding: 20px;
     border-radius: 10px;
-  }
-  
+}
+
 
 
 
@@ -380,7 +394,8 @@
 }
 
 .modal .btn-primary {
-    background-color: #FFDE59; /* Color verde personalizado */
+    background-color: #FFDE59;
+    /* Color verde personalizado */
     border-color: none;
     color: black;
 }
@@ -401,9 +416,11 @@
 /* Cambiar el color de fondo cuando el botón está activo (cuando haces clic) */
 .modal .btn-primary:active,
 .modal .btn-primary:focus {
-    background-color: #218838; /* Color más oscuro */
+    background-color: #218838;
+    /* Color más oscuro */
     border-color: #1e7e34;
-    box-shadow: none; /* Elimina el borde de sombra que aparece por defecto */
+    box-shadow: none;
+    /* Elimina el borde de sombra que aparece por defecto */
 }
 
 /* Mantener el color hover cuando está activo */

@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 // Navegacion de card alargadas del home a sesiones internas
     function navigateTo(section) {
         if (section === 'productos') {

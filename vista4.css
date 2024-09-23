@@ -1,15 +1,14 @@
 /* Estilos general */
-
 /* Agregar margen superior a ambas columnas */
 .col-md-3.bg-left {
-    margin-top: 64px; /* Ajusta este valor según sea necesario */
+    margin-top: 64px;
+    /* Ajusta este valor según sea necesario */
 }
 
 .col-md-9.bg-white {
-    margin-top: 32px; /* Ajusta este valor según sea necesario */
+    margin-top: 32px;
+    /* Ajusta este valor según sea necesario */
 }
-
-
 
 body {
     font-family: 'Arial', sans-serif;

@@ -1,5 +1,4 @@
 /* General */
-
 /* Cambiar el color de fondo y el color del texto */
 .btn {
     background-color: #FFDE59;
@@ -272,8 +271,6 @@ section {
 
 }
 
-/* ---------------------------------------------------------- */
-
 /* Para ajustar el espaciado entre las tarjetas en dispositivos pequeños */
 @media (max-width: 768px) {
     .col-md-3 {
@@ -281,9 +278,7 @@ section {
     }
 }
 
-
 /* Seccion Contactenos */
-
 .contacto {
     padding-left: 50px;
     /* Ajusta este valor según lo que necesites para la alineación */
@@ -454,7 +449,8 @@ section {
 }
 
 .modal .btn-primary {
-    background-color: #FFDE59; /* Color verde personalizado */
+    background-color: #FFDE59;
+    /* Color verde personalizado */
     border-color: none;
     color: black;
 }
@@ -477,16 +473,18 @@ section {
 }
 
 .modal-changed {
-    background-color: #FFDE59; 
-  }
+    background-color: #FFDE59;
+}
 
 
 /* Cambiar el color de fondo cuando el botón está activo (cuando haces clic) */
 .modal .btn-primary:active,
 .modal .btn-primary:focus {
-    background-color: #218838; /* Color más oscuro */
+    background-color: #218838;
+    /* Color más oscuro */
     border-color: #1e7e34;
-    box-shadow: none; /* Elimina el borde de sombra que aparece por defecto */
+    box-shadow: none;
+    /* Elimina el borde de sombra que aparece por defecto */
 }
 
 /* Mantener el color hover cuando está activo */
@@ -502,8 +500,6 @@ section {
     border-color: #545b62;
     box-shadow: none;
 }
-
-
 
 
 /* Ajuste en pantallas más pequeñas */

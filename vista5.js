@@ -1,4 +1,4 @@
-// Supongamos que este JSON contiene los productos seleccionados de la vista anterior
+// Ejemplo con JSON contiene los productos seleccionados de la vista anterior
 const selectedProducts = [
     {
         id: 1,
