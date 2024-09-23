@@ -1,0 +1,523 @@
+/* General */
+
+/* Cambiar el color de fondo y el color del texto */
+.btn {
+    background-color: #FFDE59;
+    /* Color amarillo */
+    color: #666666;
+    /* Color del texto */
+    border-radius: 12px;
+    /* Puedes ajustar la redondez */
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
+    border-color: #cacaca;
+    color: #8E8E8E;
+}
+
+/* Cuando el botón es pulsado o está activo */
+.btn-primary:hover {
+    background-color: #FFA500;
+    /* Cambia el color en hover */
+}
+
+/* Fuentes */
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Puedes cambiarlo por la fuente que prefieras */
+}
+
+/* Si deseas cambiar para títulos o botones de manera específica */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Georgia', serif;
+    /* Fuente diferente para los títulos */
+}
+
+.btn {
+    font-family: 'Verdana', sans-serif;
+    /* Fuente específica para botones */
+}
+
+
+/* Seccion general y desplazamiento sobre la web */
+
+/* Desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+    /* Añade un desplazamiento suave al navegar */
+    scroll-padding-top: 64px;
+    /* Ajusta este valor según la altura de tu menú */
+
+}
+
+/* Bajar cabecera de seccion en el desplazamiento */
+section {
+    scroll-margin-top: 60px;
+    /* Ajusta el valor según sea necesario */
+}
+
+/* Contenedor general para ajustar el ancho */
+.container {
+    max-width: 1200px;
+    /* Asegura que el contenido no se extienda demasiado en pantallas grandes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Desarrollado por Javier Sanjuanelo */
+
+/* Hero */
+
+/* Nosotros */
+
+
+/* Aplica un margen superior al hacer scroll a la sección con id "nosotros" */
+#seccion_2 {
+    scroll-margin-top: 86px;
+    /* Ajusta este valor según la altura de tu cabecera */
+}
+
+#seccion_2 {
+    padding-left: 20px;
+    /* Ajusta el valor según sea necesario */
+    margin-left: 32px;
+    margin-right: 24px;
+    max-width: 1200px;
+    /* Asegura que el contenido no se extienda demasiado */
+}
+
+
+/* Seccion carrusel de productos destacados */
+
+.card {
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    margin-bottom: 20px;
+    /* Margen inferior */
+    transition: transform 0.2s ease-in-out;
+    /* Transición suave en hover */
+}
+
+/* Imagen de la tarjeta */
+.card-img-top {
+    border-top-left-radius: 8px;
+    /* Borde redondeado arriba izquierda */
+    border-top-right-radius: 8px;
+    /* Borde redondeado arriba derecha */
+    height: 200px;
+    /* Altura fija de la imagen */
+    object-fit: cover;
+    /* Escalar imagen sin distorsión */
+}
+
+/* Título de la tarjeta */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    /* Negrita para el título */
+}
+
+/* Texto de descripción de la tarjeta */
+.card-text {
+    margin-bottom: 10px;
+    /* Margen inferior */
+}
+
+/* Estrellas de calificación */
+.rating i {
+    color: #FCD305;
+    /* Color amarillo para las estrellas */
+    font-size: 1.2rem;
+    /* Tamaño de las estrellas */
+}
+
+/* Estilo del precio en la tarjeta */
+.price {
+    font-size: 1.1rem;
+    /* Tamaño de letra para el precio */
+}
+
+/* Pildora de la card */
+
+.card .bottom-section {
+    background-color: #f0f0f0;
+    /* Color gris claro para la sección inferior */
+    padding: 10px;
+    /* Espaciado interno */
+    border-radius: 0 0 8px 8px;
+    /* Bordes redondeados en la parte inferior */
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre botones e íconos */
+    align-items: center;
+    /* Alineación vertical centrada */
+    margin-top: 10px;
+    /* Espacio superior */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+}
+
+/* Botones de acción (compartir, me gusta, carrito) */
+.card .bottom-section .action-buttons {
+    display: flex;
+    /* Mostrar botones en línea */
+    justify-content: flex-start;
+    /* Alineación a la izquierda */
+    gap: 15px;
+    /* Espaciado entre los botones */
+}
+
+/* Estilo individual para los botones de acción */
+.card .bottom-section .action-buttons a {
+    background-color: white;
+    /* Fondo blanco */
+    border: 1px solid #ccc;
+    /* Borde gris claro */
+    padding: 5px 8px;
+    /* Espaciado interno de los botones */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave al hacer hover */
+}
+
+.card .bottom-section .action-buttons a:hover {
+    background-color: #e0e0e0;
+    /* Color gris claro al hacer hover */
+}
+
+/* Estilo para el precio en la sección inferior */
+.card .bottom-section .price {
+    font-size: 1.2rem;
+    /* Tamaño del texto del precio */
+    color: green;
+    /* Color verde para el precio */
+    font-weight: bold;
+    /* Negrita para el precio */
+}
+
+/* Indicadores del carrusel */
+
+.carousel-indicators [data-bs-target] {
+    background-color: #FFDE59;
+    /* Color de los puntos inactivos */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    /* Puntos circulares */
+    margin-top: 70px;
+    /* Posición del margen superior */
+    margin-bottom: -32px;
+    /* Ajuste del margen inferior */
+    align-items: center;
+    /* Alineación central */
+}
+
+/* Puntos activos del carrusel */
+.carousel-indicators .active {
+    background-color: #FFA500;
+    /* Color de los puntos activos */
+    width: 15px;
+    height: 15px;
+    margin-top: 70px;
+    /* Posición del margen superior */
+    margin-bottom: -32px;
+    /* Ajuste del margen inferior */
+    align-items: center;
+    /* Alineación central */
+}
+
+
+/* Seccion Testimonios */
+
+.carousel-item blockquote {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    color: white;
+}
+
+/* Ajustar la altura del contenedor del testimonial */
+.carousel-inner-testimonios {
+    height: 300px;
+    /* Ajusta según sea necesario */
+}
+
+/* Estilo para los puntos del carrusel de testimonios */
+#carouselTestimonios .carousel-indicators [data-bs-target] {
+    background-color: #FFDE59;
+    /* Color de los puntos inactivos */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 20px;
+    /* Ajuste de posición */
+    margin-bottom: -20px;
+}
+
+#carouselTestimonios .carousel-indicators .active {
+    background-color: gold;
+    width: 15px;
+    height: 15px;
+    margin-bottom: -20px;
+
+}
+
+/* ---------------------------------------------------------- */
+
+/* Para ajustar el espaciado entre las tarjetas en dispositivos pequeños */
+@media (max-width: 768px) {
+    .col-md-3 {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Seccion Contactenos */
+
+.contacto {
+    padding-left: 50px;
+    /* Ajusta este valor según lo que necesites para la alineación */
+    padding-right: 50px;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+/* Ajuste de la imagen para que se alinee con el contenedor */
+.contacto .ajuste-imagen {
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Título de la sección alineado a la izquierda */
+.contacto .titulo-seccion {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #3b3b3b;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilo para las etiquetas y campos de formulario */
+.contacto .form-label {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #3b3b3b;
+}
+
+/* Campos del formulario sin recuadro, solo una línea */
+.contacto .sin-recuadro {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    padding: 8px 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contacto .sin-recuadro:focus {
+    border-bottom: 2px solid #28a745;
+    outline: none;
+}
+
+/* Estilo del botón de enviar */
+.contacto .btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 42px;
+    border-radius: 5px;
+}
+
+/* Ajuste de la altura de la imagen y el formulario */
+.contacto .row.align-items-center {
+    min-height: 450px;
+    /* Ajusta la altura mínima del contenedor */
+}
+
+/* Badge (etiqueta) sobre la imagen */
+.contacto .badge {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer h4,
+.footer h5 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer p,
+.footer li {
+    color: #ccc;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFDE59;
+}
+
+/* Ajuste de los iconos sociales */
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .row {
+    margin-bottom: 20px;
+}
+
+.footer .row.mt-4 {
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+}
+
+.footer .col-md-6 {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del contenedor negro con bordes redondeados */
+.footer .row.mt-4 {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Boton modal para el registro del usuar */
+/* Creado por Javier Sanjuanelo */
+.modal-header {
+    background-color: #333;
+    color: white;
+}
+
+.modal .btn-primary {
+    background-color: #FFDE59; /* Color verde personalizado */
+    border-color: none;
+    color: black;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.modal-footer a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.modal-footer a:hover {
+    color: #0a58ca;
+}
+
+.modal-changed {
+    background-color: #FFDE59; 
+  }
+
+
+/* Cambiar el color de fondo cuando el botón está activo (cuando haces clic) */
+.modal .btn-primary:active,
+.modal .btn-primary:focus {
+    background-color: #218838; /* Color más oscuro */
+    border-color: #1e7e34;
+    box-shadow: none; /* Elimina el borde de sombra que aparece por defecto */
+}
+
+/* Mantener el color hover cuando está activo */
+.modal .btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Cambiar el color del botón secundario al hacer clic */
+.modal .btn-secondary:active,
+.modal .btn-secondary:focus {
+    background-color: #5a6268;
+    border-color: #545b62;
+    box-shadow: none;
+}
+
+
+
+
+/* Ajuste en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .col-md-6 {
+        text-align: center;
+    }
+}

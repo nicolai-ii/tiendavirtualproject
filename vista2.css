@@ -1,0 +1,421 @@
+/* Primera Columna */
+
+.col-md-3 {
+    margin-right: 2px;
+    margin-left: -30px;
+}
+
+.col-md-3 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 64px;
+    z-index: 10;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Estilos del filtro de ecommerce */
+.filtros h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filtros ul {
+    padding-left: 0;
+}
+
+.filtros li {
+    margin-bottom: 10px;
+}
+
+.filtros input[type="checkbox"], .filtros input[type="radio"] {
+    margin-right: 10px;
+}
+
+.filtros select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Cajita de destacados */
+.alert.alert-success {
+    background-color: #159985;
+    color: white;
+}
+
+.alert .btn {
+    background-color: #FFF06A;
+    color: black;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Calificacion con estrellas */
+.rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: inline-flex;
+}
+
+.rating .star {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star {
+    color: gold;
+}
+
+.rating .star.selected {
+    color: gold;
+}
+
+/* Footer general */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer h4, .footer h5 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer p, .footer li {
+    color: #ccc;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFDE59;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .row {
+    margin-bottom: 20px;
+}
+
+.footer .row.mt-4 {
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .col-md-6 {
+        text-align: center;
+    }
+}
+
+/* Estilos de la card */
+.card {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: #FCD305;
+    font-size: 1.2rem;
+}
+
+/* Pildora inferior de la card */
+
+.card .bottom-section {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .bottom-section .action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.card .bottom-section .action-buttons a {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.card .bottom-section .action-buttons a:hover {
+    background-color: #e0e0e0;
+}
+
+.card .bottom-section .price {
+    font-size: 1rem;
+    color: green;
+    font-weight: bold;
+}
+
+/* Card expandida - resumen de la compra */
+/* Tarjeta expandida */
+#expandedCard-carousel1 {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 140px; /* Aumentar el margen superior para que la tarjeta no esté tan pegada */
+    width: 40%; /* Ajusta el ancho si es necesario */
+    margin-right: 20px; /* Añadir margen derecho para separar de los bordes */
+    background-color: white;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    padding: 15px; /* Añadir relleno interno */
+    transition: all 0.3s ease;
+}
+
+/* Botón de cierre (X) en la parte superior derecha */
+#expandedCard-carousel1 .close-expanded {
+    position: absolute;
+    top: 10px; /* Posicionar en la parte superior */
+    right: 10px; /* Posicionar en la parte derecha */
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+#expandedCard-carousel1 .close-expanded:hover {
+    color: #333;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer h4,
+  .footer h5 {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .footer p,
+  .footer li {
+    color: #ccc;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer ul li a:hover {
+    color: #fff;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #FFDE59;
+  }
+  
+  /* Ajuste de los iconos sociales */
+  .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer .row {
+    margin-bottom: 20px;
+  }
+  
+  .footer .row.mt-4 {
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+  }
+  
+  .footer .col-md-6 {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo del contenedor negro con bordes redondeados */
+  .footer .row.mt-4 {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+
+
+
+/* Contador de productos */
+.product-quantity {
+    font-size: 1.2rem;
+}
+
+.product-quantity button {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Botón de comprar */
+#addToCart {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+#addToCart:hover {
+    background-color: #218838;
+}
+
+/* Boton modal para el registro del usuar */
+/* Creado por Javier Sanjuanelo */
+.modal-header {
+    background-color: #333;
+    color: white;
+}
+
+.modal .btn-primary {
+    background-color: #FFDE59; /* Color verde personalizado */
+    border-color: none;
+    color: black;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.modal-footer a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.modal-footer a:hover {
+    color: #0a58ca;
+}
+
+/* Cambiar el color de fondo cuando el botón está activo (cuando haces clic) */
+.modal .btn-primary:active,
+.modal .btn-primary:focus {
+    background-color: #218838; /* Color más oscuro */
+    border-color: #1e7e34;
+    box-shadow: none; /* Elimina el borde de sombra que aparece por defecto */
+}
+
+/* Mantener el color hover cuando está activo */
+.modal .btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Cambiar el color del botón secundario al hacer clic */
+.modal .btn-secondary:active,
+.modal .btn-secondary:focus {
+    background-color: #5a6268;
+    border-color: #545b62;
+    box-shadow: none;
+}
