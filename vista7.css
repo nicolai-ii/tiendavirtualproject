@@ -1,0 +1,50 @@
+/* Estilos para la columna izquierda */
+.bg-left {
+    background-color: #f7f7e7; /* Color de fondo vacío */
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    width: 80%; /* Ancho del formulario */
+    max-width: 400px; /* Máximo ancho */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 10px;
+}
+
+/* Botón personalizado para los proveedores */
+.btn-light img {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.btn-light {
+    width: 100%;
+    text-align: left;
+    background-color: #f8f9fa;
+    border-color: #e0e0e0;
+}
+
+/* Estilos del formulario */
+form {
+    margin-top: 20px;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Fondo claro general */
+}
+
+/* Centrado y espaciado */
+.form-container h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+

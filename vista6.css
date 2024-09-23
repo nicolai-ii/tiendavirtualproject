@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.login-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+h3 {
+    color: #333;
+}
+
+button {
+    background-color: #28a745;
+    border: none;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #218
+}
