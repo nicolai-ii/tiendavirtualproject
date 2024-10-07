@@ -1,28 +1,27 @@
+// Espera a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+    // Verifica que Supabase esté disponible
+    if (typeof window.supabase === 'undefined') {
+        console.error("La biblioteca supabase-js no se cargó correctamente.");
+        return;
+    }
 
+    // Inicializa Supabase
+    const supabaseUrl = 'https://hzsuccgzdjbfbahiyzey.supabase.co';
+    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6c3VjY2d6ZGpiZmJhaGl5emV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgyNjM3NTIsImV4cCI6MjA0MzgzOTc1Mn0.P2_Eow-rZdjp1eyk-dEn8uiNP43xMORvuJeD__Cojd0';
+    const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
 
-// Importar credenciales privadas
-import * as dotenv from 'dotenv';
-dotenv.config();
+    console.log("Supabase inicializado:", supabase);
 
-
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-document.addEventListener("DOMContentLoaded", function() {
     // Manejo de los checkboxes
     const checkboxes = document.querySelectorAll('.section-checkbox');
-
     checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
+        checkbox.addEventListener('change', function () {
             const target = this.getAttribute('data-target');
             const section = document.getElementById(target);
 
-            if (this.checked) {
-                section.style.display = 'block';
-            } else {
-                section.style.display = 'none';
+            if (section) {
+                section.style.display = this.checked ? 'block' : 'none';
             }
         });
     });
@@ -51,18 +50,10 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        const usuario = {
-            nombre,
-            apellido,
-            identificacion,
-            telefono,
-            direccion,
-            password,
-        };
-
         try {
+            // Registro de usuario en Supabase
             const { data, error } = await supabase.auth.signUp({
-                email: `${nombre}@example.com`, // Supón que el email es el nombre para fines de ejemplo
+                email: `${nombre}@example.com`, // Ejemplo de email
                 password: password,
                 options: {
                     data: {
@@ -77,105 +68,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (error) {
                 errorMessage.textContent = 'Error al registrar el usuario: ' + error.message;
+                console.error("Error al registrar:", error);
             } else {
                 successMessage.textContent = 'Usuario creado exitosamente. ¡Bienvenido!';
                 errorMessage.textContent = ''; // Limpia el mensaje de error
                 form.reset(); // Limpia el formulario
             }
         } catch (error) {
-            console.error(error);
+            console.error("Error en el registro:", error);
             errorMessage.textContent = 'Error inesperado: ' + error.message;
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------------------
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     // Obtenemos todos los checkboxes
-//     const checkboxes = document.querySelectorAll('.section-checkbox');
-
-//     // Añadimos un evento a cada checkbox
-//     checkboxes.forEach(checkbox => {
-//         checkbox.addEventListener('change', function() {
-//             const target = this.getAttribute('data-target');
-//             const section = document.getElementById(target);
-
-//             // Mostrar u ocultar la sección correspondiente
-//             if (this.checked) {
-//                 section.style.display = 'block';
-//             } else {
-//                 section.style.display = 'none';
-//             }
-//         });
-//     });
-// });
-
-
-
-// //Conexion a base de datos
-// const form = document.getElementById('myForm');
-// const registrarBtn = document.getElementById('registrarBtn');
-// const errorMessage = document.getElementById('errorMessage'); // Elemento para mostrar mensajes de error
-// const successMessage = document.getElementById('successMessage'); // Elemento para mostrar mensajes de éxito
-
-// registrarBtn.addEventListener('click', async (event) => {
-//   event.preventDefault();
-
-//   // Obtener los valores de los campos
-//     const nombre = document.getElementById('nombre').value;
-//     const apellido = document.getElementById('apellido').value;
-//     const identificacion = document.getElementById('identificacion').value;
-//     const telefono = document.getElementById('telefono').value;
-//     const direccion = document.getElementById('direccion').value;
-//     const password = document.getElementById('password').value;
-
-//   // Validación   básica de los datos
-//   if (!nombre || !apellido || !identificacion || !telefono || !direccion || !password) {
-//     errorMessage.textContent = 'Por favor, completa todos los campos.';
-//     return;
-//   }
-
-//   // Crear un objeto con los datos del usuario
-//   const usuario = {
-//     nombre,
-//     apellido,
-//     identificacion,
-//     telefono,
-//     direccion,
-//     password,
-//   };
-
-//   // Inicializar el cliente de Supabase (reemplaza con tus claves)
-//   const supabase = createClient('https://hzsuccgzdjbfbahiyzey.supabase.co', 'Caribesoy234*');
-
-//   try {
-//     const { user, error } = await supabase.auth.signUp(usuario);
-
-//     if (error) {
-//       errorMessage.textContent = 'Error al registrar el usuario: ' + error.message;
-//     } else {
-//       successMessage.textContent = 'Usuario creado exitosamente. ¡Bienvenido!';
-//       // Redirigir a otra página (opcional)
-//       // window.location.href = '/login';
-//     }
-//   } catch (error) {
-//     console.error(error);
-//     errorMessage.textContent = 'Error inesperado: ' + error.message;
-//   }
-// });
 
