@@ -1,0 +1,15 @@
+{
+  "name": "tiendavirtual",
+  "version": "1.0.0",
+  "description": "Proyecto Ecommerce sector servicios - PolitecG ## Licencia Este proyecto está licenciado bajo los términos de la [GNU AFFERO GENERAL PUBLIC LICENSE  Version 3, 19 November 2007 <https://www.gnu.org/licenses/>.).",
+  "main": "admin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4"
+  }
+}

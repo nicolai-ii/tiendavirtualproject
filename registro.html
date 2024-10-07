@@ -1,0 +1,196 @@
+<!-- Administracion de usuarios finales -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="registro.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-5" href="home.html#vista1">Tienda Virtual</a>
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3"><a class="nav-link" href="#">Productos</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="index.html#seccion_2">Nosotros</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="#">Compra aquí</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="index.html#seccion_4">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="d-flex ms-auto">
+                <a href="vista5.html" class="nav-link mx-3"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="nav-link mx-3"><i class="bi bi-heart"></i></a>
+                <a href="vista4.html" class="nav-link mx-3"><i class="bi bi-person"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container-fluid vh-100 d-flex flex-column">
+        <div class="row flex-grow-1">
+            <!-- Columna izquierda con menú -->
+            <div class="col-md-3 bg-left p-4">
+                <h4>Mis datos</h4>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox" class="section-checkbox" data-target="seccion-usuario" checked> Usuario
+                    </li>
+                    <li><input type="checkbox" class="section-checkbox" data-target="seccion-datos-personales"> Datos
+                        personales</li>
+                    <!-- <li><input type="checkbox" class="section-checkbox" data-target="seccion-metodos-pago"> Métodos de
+                        pago</li> -->
+                    <li><input type="checkbox" class="section-checkbox" data-target="seccion-direccion"> Dirección y
+                        domicilio</li>
+                    <li><input type="checkbox" class="section-checkbox" data-target="seccion-contrasena"> Contraseña
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna derecha con el formulario -->
+            <div class="col-md-9 bg-white p-5">
+                <h2>Mis Datos</h2>
+                <p>Para realizar tus compras completa tus datos personales y de envío de productos.</p>
+
+                <!-- Formulario -->
+                <form id="myForm">
+                    <!-- Sección Usuario -->
+                    <div class="form-section" id="seccion-usuario">
+                        <div class="mb-3">
+                            <label for="email">Usuario:</label>
+                            <input type="email" id="email" placeholder="usuario@gmail.com" class="form-control"
+                                disabled>
+                        </div>
+                    </div>
+
+                    <!-- Sección Datos Personales -->
+                    <div class="form-section" id="seccion-datos-personales" style="display:none;">
+                        <h5>Datos personales</h5>
+                        <div class="mb-3">
+                            <input id="nombre" type="text" placeholder="Nombre" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input id="apellido"   type="text" placeholder="Apellido" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input id="identificacion" type="text" placeholder="Identificación" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input id="telefono" type="tel" placeholder="Teléfono principal" class="form-control">
+                        </div>
+                        <!-- <div class="mb-3">
+                            <input type="tel" placeholder="Teléfono alternativo" class="form-control">
+                        </div> -->
+                    </div>
+
+                    <!-- Sección Métodos de Pago -->
+                    <!-- <div class="form-section" id="seccion-metodos-pago" style="display:none;">
+                        <h5>Métodos de pago</h5>
+                        <div class="mb-3">
+                            <input type="text" placeholder="Método Principal" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" placeholder="Método secundario" class="form-control">
+                        </div>
+                    </div> -->
+
+                    <!-- Sección Dirección y Domicilio -->
+                    <div class="form-section" id="seccion-direccion" style="display:none;">
+                        <h5>Domicilio principal para envío de productos</h5>
+                        <div class="mb-3">
+                            <textarea id="direccion" rows="3"
+                                class="form-control" placeholder="Escribe aquí tu dirección"></textarea>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Sección Contraseña -->
+                    <div class="form-section" id="seccion-contrasena" style="display:none;">
+                        <h5>Contraseña</h5>
+                        <div class="mb-3">
+                            <input type="password" placeholder="Nueva Contraseña" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input id="password" type="password" placeholder="Confirmar Contraseña" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex justify-content-between">
+                        <button id="registrarBtn" type="submit" class="btn btn-primary">Registrar</button>
+                        <button type="button" class="btn btn-secondary" id="cancelarBtn">Cancelar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorMessage" class="alert alert-danger" role="alert"></div>
+    <div id="successMessage" class="alert alert-success" role="alert"></div>   
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h4>Tu Tienda Virtual</h4>
+                    <p>
+                        Encuentra los mejores productos de Belleza en este lugar, contáctanos
+                        para más información.
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Nosotros</h5>
+                    <ul>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Short brief</h5>
+                    <ul>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Compra en línea</a></li>
+                        <li><a href="#">Pagos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Contáctanos</h5>
+                    <p>Tel: 300-2934058</p>
+                    <p>Email:</p>
+                </div>
+            </div>
+            <div class="row mt-4 align-items-center">
+                <div class="col-md-6">
+                    <p>Todos los derechos reservados</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-envelope"></i></a>
+                        <a href="#"><i class="bi bi-telephone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="registro.js"></script>
+
+</body>
+
+</html>
