@@ -4,7 +4,7 @@ import { supabase } from './supabaseClient';
 export async function registrarUsuario(email, password, nombre) {
   const { data, error } = await supabase
     .from('usuarios')
-    .insert([{ email, password, nombre }]);
+    .insert([{ email, password, nombre, apellido, direccion, identificacion, telefono }]);
   if (error) {
     console.error('Error registrando usuario:', error.message);
     return null;
