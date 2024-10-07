@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 
 // Configura tus credenciales de Supabase
 const supabaseUrl = 'https://hzsuccgzdjbfbahiyzey.supabase.co';
-const supabaseKey = 'Caribesoy234*';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6c3VjY2d6ZGpiZmJhaGl5emV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgyNjM3NTIsImV4cCI6MjA0MzgzOTc1Mn0.P2_Eow-rZdjp1eyk-dEn8uiNP43xMORvuJeD__Cojd0';
 
 // Crea el cliente de Supabase
 export const supabase = createClient(supabaseUrl, supabaseKey);

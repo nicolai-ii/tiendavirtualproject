@@ -1,3 +1,15 @@
+
+
+// Importar credenciales privadas
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
 document.addEventListener("DOMContentLoaded", function() {
     // Manejo de los checkboxes
     const checkboxes = document.querySelectorAll('.section-checkbox');
