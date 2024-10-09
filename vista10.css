@@ -1,0 +1,27 @@
+/* Estilos para la columna izquierda */
+.bg-left {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.bg-right {
+    background-color: #F5F6F8;
+}
+
+ul.list-unstyled {
+    padding-left: 0;
+}
+
+ul.list-unstyled li {
+    margin-bottom: 15px;
+}
+
+ul.list-unstyled li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+ul.list-unstyled li a.active {
+    color: #007BFF;
+}
